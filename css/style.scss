@@ -4,59 +4,159 @@
 
 .main {
 }
-.game-header {
-	background-color: $primary-color;
-	&__wrapper{
-		@include cnt(50px);
-	}
-	&__logo {
-		font-weight: 600;
-		font-size: 24px;
-		color: $white-color;
-	}
-	&__signup {
-		position: relative;
-		&-link {
-			font-weight: 400;
-			color: $white-color;
-			transition: $transition;
-		}
-		&:after{
-			content: "";
-      background-image: url(../img/login.svg);
-      width: 20px;
-      height: 20px;
-			cursor: pointer;
-			position: absolute;
-			left: -25px;
-			fill: $white-color;
-		}
-		&:hover .game-header__signup-link{
-			color: darken($white-color, 20%);
-		}
-	}
+.game-section {
+	
 }
 .container {
+  display: flex;
+  justify-content: center;
 }
+.game-login {
+	padding-top: 300px;
+	&__subtitle {
+		color: $secondary-color;
+		margin-top: 50px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 300;
+    @media screen and ( max-width: 768px ) {
+      font-size: 24px;
+    }
+	}
+	&__block {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__input {
+		font-size: 24px;
+		padding: 10px 15px;
+		width: 60%;
+		border: 1px solid $secondary-color;
+	}
+
+	&__btn {
+		border: 1px solid $secondary-color;
+		color: $secondary-color;
+		margin-top: 20px;
+		transition: $transition;
+		&:hover {
+			background-color: $secondary-color;
+			border: 1px solid $secondary-color;
+			color: $white-color;
+		}
+	}
+}
+.btn {
+	width: 60%;
+	padding: 10px 20px;
+	font-size: 18px;
+
+}
+
+.game-page {
+	background: $primary-color;
+	color: $white-color;
+	
+}
+.game-start {
+	background: $white-color;
+	color: $secondary-color;
+}
+
 .game-wrapper {
-}
-.logo {
-}
-.game-section {
-}
-.game {
-
-		&__img {
+	width: 690px;
+  min-height: 739px;
+  margin-top: 40px;
+  padding: 40px;
+  box-shadow: 10px 0px 70px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	transition: $transition;
+	&__title {
+		color: $secondary-color;
+    text-align: center;
+		font-size: 44px;
+		font-weight: 500;
+    @media screen and ( max-width: 768px ) {
+      font-size: 24px;
 		}
-
-		&__img-title {
+		&-white{
+			color: $white-color;
+			text-align: center;
+			font-size: 44px;
+			font-weight: 500;
+			@media screen and ( max-width: 768px ) {
+				font-size: 24px;
+			}
 		}
-
-		&__title {
+	}
+	@media screen and ( max-width: 768px ) {
+		margin-top: 20px;
+		padding: 20px;
+		border-radius: 10px;
+	}
+	&__user {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 20px;
+		&-btn {
+			margin-left: 8px;
+			fill: $white-color;
+			content: "";
+			background: url(../img/logout.svg) center no-repeat;;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
 		}
-
-		&__title-subtitle {
-		}
+	}
 }
-
-
+.before-block {
+	&__wrapper{
+		display: flex;
+		justify-content: center;
+		align-self: center;
+		margin-top: 100px;
+	}
+	&__btn-start {
+		color: $white-color;
+		border: 2px solid $white-color;
+		&:hover {
+			background-color: $white-color;
+			color: $primary-color;
+		}
+		&:active {
+			color: darken($primary-color, 20%);
+		}
+	}
+	&__btn-info {
+		color: $green-color;
+		border: 2px solid $green-color;
+		&:hover {
+			background-color: $green-color;
+			color: $secondary-color;
+		}
+		&:active {
+			color: darken($secondary-color, 20%);
+		}
+	}
+}
+.btn-c {
+	font-size: 34px;
+	font-weight: 500;
+	letter-spacing: 3px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	transition: $transition;
+	&:active {
+		box-shadow: inset 10px 0px 70px 2px rgba(0, 0, 0, 0.2);
+	}
+}
+.user-info {
+	color: $white-color;
+  text-align: center;
+	font-size: 24px;
+	font-weight: 500;
+}

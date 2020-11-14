@@ -1,6 +1,8 @@
-$primary-color: #0992F4;
+$primary-color: #EB5757;
+$secondary-color: #002147;
+$green-color: #6FCF97;
 $white-color: #ffffff;
 
 @mixin cnt($h){display: flex;flex-direction: row;height: $h;text-align: center;align-items: center;justify-content: space-between;}
 
-$transition: .3s all ease;
+$transition: .2s all ease;

@@ -1,29 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-@media (max-width: 1452px) {
-  .container {
-    max-width: 970px;
-  }
-}
-
-@media (max-width: 992.98px) {
-  .container {
-    max-width: 750px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .container {
-    max-width: none;
-    padding: 0 10px;
-  }
-}
-
 * {
   padding: 0px;
   margin: 0px;
@@ -60,7 +35,7 @@ body {
   font-size: 100%;
   line-height: 1,5;
   font-size: 16px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -80,7 +55,7 @@ body.lock {
 }
 
 input, button, textarea {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 input::-ms-clear {
@@ -89,6 +64,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  background: none;
 }
 
 button::-moz-focus-inner {
@@ -117,47 +93,190 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
 }
 
-.game-header {
-  background-color: #0992F4;
+.ml-3 {
+  margin-left: 3rem;
 }
 
-.game-header__wrapper {
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.game-login {
+  padding-top: 300px;
+}
+
+.game-login__subtitle {
+  color: #002147;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .game-login__subtitle {
+    font-size: 24px;
+  }
+}
+
+.game-login__block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-login__input {
+  font-size: 24px;
+  padding: 10px 15px;
+  width: 60%;
+  border: 1px solid #002147;
+}
+
+.game-login__btn {
+  border: 1px solid #002147;
+  color: #002147;
+  margin-top: 20px;
+  transition: 0.2s all ease;
+}
+
+.game-login__btn:hover {
+  background-color: #002147;
+  border: 1px solid #002147;
+  color: #ffffff;
+}
+
+.btn {
+  width: 60%;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.game-page {
+  background: #EB5757;
+  color: #ffffff;
+}
+
+.game-start {
+  background: #ffffff;
+  color: #002147;
+}
+
+.game-wrapper {
+  width: 690px;
+  min-height: 739px;
+  margin-top: 40px;
+  padding: 40px;
+  box-shadow: 10px 0px 70px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  transition: 0.2s all ease;
+}
+
+.game-wrapper__title {
+  color: #002147;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .game-wrapper__title {
+    font-size: 24px;
+  }
+}
+
+.game-wrapper__title-white {
+  color: #ffffff;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .game-wrapper__title-white {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game-wrapper {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+.game-wrapper__user {
   display: flex;
   flex-direction: row;
-  height: 50px;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.game-header__logo {
-  font-weight: 600;
-  font-size: 24px;
-  color: #ffffff;
-}
-
-.game-header__signup {
-  position: relative;
-}
-
-.game-header__signup-link {
-  font-weight: 400;
-  color: #ffffff;
-  transition: 0.3s all ease;
-}
-
-.game-header__signup:after {
-  content: "";
-  background-image: url(../img/login.svg);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  position: absolute;
-  left: -25px;
+.game-wrapper__user-btn {
+  margin-left: 8px;
   fill: #ffffff;
+  content: "";
+  background: url(../img/logout.svg) center no-repeat;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
-.game-header__signup:hover .game-header__signup-link {
-  color: #cccccc;
+.before-block__wrapper {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 100px;
+}
+
+.before-block__btn-start {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.before-block__btn-start:hover {
+  background-color: #ffffff;
+  color: #EB5757;
+}
+
+.before-block__btn-start:active {
+  color: #c51717;
+}
+
+.before-block__btn-info {
+  color: #6FCF97;
+  border: 2px solid #6FCF97;
+}
+
+.before-block__btn-info:hover {
+  background-color: #6FCF97;
+  color: #002147;
+}
+
+.before-block__btn-info:active {
+  color: black;
+}
+
+.btn-c {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.2s all ease;
+}
+
+.btn-c:active {
+  box-shadow: inset 10px 0px 70px 2px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */

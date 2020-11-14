@@ -4,29 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Bulls and Cows</title>
+  <title>Bulls&Cows</title>
 </head>
 <body>
   <div class="main">
-    <header class="game-header">
-      <div class="container">
-        <div class="game-header__wrapper">
-          <div class="logo game-header__logo">Bulls and Cows</div>
-          <div class="game-header__signup">
-            <a class="game-link game-header__signup-link" href="#">Вход/Регистрация</a>
+    <section class="game-section">
+      <div class="container center">
+        <!-- Страница Авторизация -->
+        <div class="game-wrapper game-login" >
+          <div class="game-wrapper__title">Bulls&Cows</div>
+          <div class="game-login__subtitle">Авторизация</div>
+          <div class="game-login__block">
+            <input type="text" class="game-login__input" placeholder="Логин">
+            <button class="game-login__btn btn">Вход</button>
           </div>
         </div>
-      </div>
-    </header>
-    <section class="game-section">
-      <div class="container">
-        <div class="game-wrapper">
-          <div class="game__img">
-            <span class="game__img-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia eos minima voluptate at cupiditate dolore aliquid animi, quo aperiam incidunt ex porro, possimus omnis? Animi, quasi. Quaerat beatae quod totam placeat voluptates, alias natus odit sapiente explicabo enim eos necessitatibus itaque veritatis dolorum distinctio delectus minus eius reprehenderit! Quidem cupiditate commodi soluta dolor quo perferendis, sunt exercitationem, ut enim quaerat, iure officiis sit repellendus doloremque unde aliquid fugit voluptates totam delectus. Pariatur odio voluptatem dolor adipisci repellat numquam nihil natus et debitis delectus consectetur possimus, laboriosam itaque repellendus inventore velit quae quos in facilis? Quo dolor doloribus voluptate minima architecto?</span>
+        <!-- Страница игры -->
+        <div class="game-wrapper game-page" hidden >
+          <div class="game-wrapper__title-white">Bulls&Cows</div>
+          <div class="game-wrapper__user">
           </div>
-          <div class="game__title">
-            <span class="game__title-subtitle"></span>
+          <div class="game-wrapper__before">
+            <div class="before-block__wrapper">
+              <button class="before-block__btn-start btn-c ">Старт</button>
+              <button class="before-block__btn-info btn-c ml-3">Инфо</button>
+            </div>
           </div>
+        </div>
+        <!-- Старт игры -->
+        <div class="game-wrapper game-start" hidden>
+
         </div>
       </div>
     </section>  
