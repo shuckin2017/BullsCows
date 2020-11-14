@@ -1,0 +1,6 @@
+$primary-color: #0992F4;
+$white-color: #ffffff;
+
+@mixin cnt($h){display: flex;flex-direction: row;height: $h;text-align: center;align-items: center;justify-content: space-between;}
+
+$transition: .3s all ease;

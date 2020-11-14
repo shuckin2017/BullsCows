@@ -1,17 +1,50 @@
-@import "https://github.com/hankchizljaw/modern-css-reset/blob/master/src/reset.css";
+@import "source/setting";
+@import "source/vars";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 .main {
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
+}
+.game-header {
+	background-color: $primary-color;
+	&__wrapper{
+		@include cnt(50px);
+	}
+	&__logo {
+		font-weight: 600;
+		font-size: 24px;
+		color: $white-color;
+	}
+	&__signup {
+		position: relative;
+		&-link {
+			font-weight: 400;
+			color: $white-color;
+			transition: $transition;
+		}
+		&:after{
+			content: "";
+      background-image: url(../img/login.svg);
+      width: 20px;
+      height: 20px;
+			cursor: pointer;
+			position: absolute;
+			left: -25px;
+			fill: $white-color;
+		}
+		&:hover .game-header__signup-link{
+			color: darken($white-color, 20%);
+		}
+	}
+}
+.container {
+}
+.game-wrapper {
+}
+.logo {
+}
+.game-section {
 }
 .game {
-
-		&__container {
-		}
-
-		&__header {
-		}
 
 		&__img {
 		}
@@ -24,18 +57,6 @@
 
 		&__title-subtitle {
 		}
-}
-.logo {
-
-}
-.header {
-
-		&__logo {
-
-		}
-}
-.container {
-
 }
 
 
