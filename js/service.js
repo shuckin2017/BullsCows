@@ -1,9 +1,9 @@
 'use strict' 
 
-const service = {
+export default { 
   createNumber() {
     let genNumber = '';
-    for( i = 0; i < 4; i++ ) {
+    for( let i = 0; i < 4; i++ ) {
       let newNum = Math.floor(Math.random() * 9) + 1;
       if(!genNumber.includes(newNum)) {
         genNumber += newNum; 
@@ -32,6 +32,5 @@ const service = {
     }); 
     return {bulls, cows};
   }
-};
+}
 
-export {service};

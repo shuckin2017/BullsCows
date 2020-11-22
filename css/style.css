@@ -232,7 +232,7 @@ ol li {
 .game-wrapper {
   width: 690px;
   min-height: 739px;
-  margin-top: 40px;
+  margin-top: 20px;
   box-shadow: 10px 0px 70px 2px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   transition: 0.2s all ease;

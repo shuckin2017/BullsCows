@@ -1,39 +1,6 @@
 'use strict' 
-// import {service} from "./service.js";
+import service from './service.js';
 
-const service = {
-  createNumber() {
-    let genNumber = '';
-    for(let i = 0; i < 4; i++ ) {
-      let newNum = Math.floor(Math.random() * 9) + 1;
-      if(!genNumber.includes(newNum)) {
-        genNumber += newNum; 
-      } else {
-        i--;
-      }
-    }
-    console.log(genNumber);
-    return genNumber;
-  },
-
-  getBullsCows(strNumberUser, strNumberRandom) {
-    const arrayNumberRandom = [...strNumberRandom];
-    const arrayNumberUser = [...strNumberUser];
-    let bulls = 0,
-        cows = 0;
-    
-    arrayNumberUser.forEach((symbol, index) => {
-      const indexInNumberRandom = arrayNumberRandom.indexOf(symbol);
-      if(indexInNumberRandom !== -1) {
-        bulls += 1;
-        if( index == indexInNumberRandom) {
-              cows += 1;
-        }
-      }
-    }); 
-    return {bulls, cows};
-  }
-};
 const loginPage = document.querySelector('.game-login'),
       loginMessage = document.querySelector('.game-login__input'),
       loginRember = document.querySelector('.check-form__input'),
@@ -55,23 +22,8 @@ const getNumber = document.querySelector('.header-start__start-input'),
       stepGame = document.querySelector('.header-start__step');
 
 
-let arrLogins = [],
-    numberRow = 0;
-
-let bulls = 0,
-    cows = 0;
-
-
-// Validation Login
-// const checkLogin = () => {
-//   const login = localStorage.getItem('login');
-//   if(login) {
-
-//   }
-// };
-// checkLogin();
-
-
+let numberRow = 0,
+    arrLogins = [];
 
 const showUserInfo = () => {
   const span = document.createElement('span'),
@@ -99,7 +51,6 @@ const checkLogin = () => {
 };
 
 const magicNumber = service.createNumber();
-
 
 loginButton.addEventListener('click', () => checkLogin());
 loginMessage.addEventListener('keydown', (e) => {
@@ -149,7 +100,6 @@ const createRow = (options) => {
   gameListStep.appendChild(row);
 };
 
-
 const checkNumber = () => {
   setTimeout(() => {
     if(getNumber.value && !isNaN(getNumber.value) && getNumber.value.length == 4){
@@ -164,17 +114,6 @@ const checkNumber = () => {
     }
   }, 300);
 };
-
-
-// for(var i = 0;i < str.length;i++){    
-//   num = str[i];   
-//   numPos = str.indexOf(num);  
-//   if(~str.indexOf(num, numPos + 1)){
-//     inputCheck.style.borderColor = "red";
-//     return
-//   }
-// }
-
 
 addNumber.addEventListener('click', ()=> checkNumber());
 getNumber.addEventListener('keydown', (e) => {
@@ -201,26 +140,3 @@ const pageShow = (element) =>{
     element.removeAttribute('hidden');
   }, 1000);
 };
-
-// const test = () => {
-// getNumber.value.split('').forEach((symbol, index) => {
-//   if(getNumber.value.indexOf(symbol) !== -1) {
-//       bulls += 1;
-//          if( index == getNumber.value.indexOf(symbol)) {
-//           cows += 1;
-//          }
-//      }
-//  });
-// };
-// test()
-
-
-
-// getNumber.value.split('').forEach((symbol, index) => {
-//   if(getNumber.value.indexOf(symbol) !== -1) {
-//          console.log(`${symbol} есть`)
-//          if( index == getNumber.value.indexOf(symbol)) {
-//              console.log(`${symbol} разряд есть`)
-//          }
-//      }
-//  });
