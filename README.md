@@ -1,1 +1,1 @@
-# Bulls and Cows game engine 
+# Bulls and Cows
