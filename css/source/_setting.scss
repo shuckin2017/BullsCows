@@ -40,7 +40,8 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
-
+svg{fill: currentColor;}
+ol li {padding: 0; margin: 0}
 
 .ml-3 {
 	margin-left: 3rem;
