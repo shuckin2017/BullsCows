@@ -32,5 +32,5 @@ export default {
     }); 
     return {bulls, cows};
   }
-}
+};
 

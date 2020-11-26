@@ -1,4 +1,5 @@
 'use strict' 
+
 import service from './service.js';
 
 const loginPage = document.querySelector('.game-login'),
@@ -20,7 +21,6 @@ const getNumber = document.querySelector('.header-start__start-input'),
       gameListStep = document.querySelector('.game-main__list'),
       playerLogin = document.querySelector('.header-start__logout'),
       stepGame = document.querySelector('.header-start__step');
-
 
 let numberRow = 0,
     arrLogins = [];
@@ -69,7 +69,6 @@ startButton.addEventListener('click', () => {
   playerLogin.innerHTML = loginMessage.value;
 });
 
-
 const addStep = (options) => {
   const {bulls, cows} = options;
   const item = document.createElement('div'),
@@ -95,12 +94,14 @@ const addStep = (options) => {
 
   return item;
 };
+
 const createRow = (options) => {
   const row = addStep(options);
   gameListStep.appendChild(row);
 };
 
 const checkNumber = () => {
+  startTimer(60);
   setTimeout(() => {
     if(getNumber.value && !isNaN(getNumber.value) && getNumber.value.length == 4){
       const options = service.getBullsCows(getNumber.value, magicNumber);
@@ -140,3 +141,21 @@ const pageShow = (element) =>{
     element.removeAttribute('hidden');
   }, 1000);
 };
+
+
+const startTimer = (i) => {
+  const timerElem = document.querySelector('.timer_elem');   
+  const timer = setInterval(() => {
+      if (i <= 20) {
+        timerElem.style.color = "red";
+      }
+      timerElem.innerHTML = `00:${i}`;
+      if (i == 0) {
+          clearInterval(timer);
+          window.location.reload();
+      }
+      i = i - 1;  
+  }, 1000);
+};
+
+

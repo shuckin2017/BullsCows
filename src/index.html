@@ -11,7 +11,7 @@
     <section class="game-section">
       <div class="container center">
         <!-- page SignIn -->
-        <div class="game-wrapper game-login" >
+        <div class="game-wrapper game-login" hidden>
           <div class="game-wrapper__title">Bulls & Cows</div>
           <div class="game-login__subtitle">Авторизация</div>
           <div class="game-login__block">
@@ -65,10 +65,10 @@
         </div>
 
         <!-- start Game -->
-        <div class="game-wrapper game-start" hidden>
+        <div class="game-wrapper game-start">
           <div class="game-start__header header-start">
             <div class="header-start__top">
-              <div class="header-start__timer top-title">Время: 00:00</div>
+              <div class="header-start__timer top-title">Время: <span class="timer_elem">00:00</span></div>
               <div class="header-start__step top-title">Ходы: 10</div>
               <div class="header-start__refresh top-title"></div>
               <div class="header-start__logout top-title">UserName</div>
