@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Bulls & Cows</title>
+</head>
+<body>
+  <div class="main">
+    <section class="game-section">
+      <div class="container center">
+        <!-- page SignIn -->
+        <div class="game-wrapper game-login" hidden>
+          <div class="game-wrapper__title">Bulls & Cows</div>
+          <div class="game-login__subtitle">Авторизация</div>
+          <div class="game-login__block">
+            <input type="text" class="game-login__input" placeholder="Логин" required>
+            <div class="block-check-form">
+              <div class="form-check">
+                <input type="checkbox" class="check-form__input" id="remember"> 
+                <span class="check-form__style"></span>
+                <label for="remember" class="check-form__label">Запомнить меня</label>
+              </div>
+              <!-- <a href="#" class="check-form_link">Удалить аккаунт</a> -->
+            </div>
+            <button class="game-login__btn btn">Вход</button>
+            <button class="game-login__btn btn">Регистрация</button>
+          </div>
+        </div>
+        <!-- page Game -->
+        <div class="game-wrapper game-page"  hidden>
+          <div class="game-page__header">
+            <div class="game-wrapper__title-white">Bulls & Cows</div>
+            <div class="game-wrapper__user">
+            </div>
+          </div>
+          <div class="game-wrapper__before">
+            <span class="before-block__text">Загадано четырехзначное число, в котором цифры не повторяться. Попробуйте отгадать его за 10 ходов. Если в предложенном варианте есть цифра, которая стоит на верном месте, то это считается «быком». Если же цифра верна, но не на своем месте, то это «корова».</span>
+            <div class="before-block__wrapper">
+              <button class="before-block__btn-start btn-c ">Старт</button>
+              <button class="before-block__btn-info btn-c ml-3">Инфо</button>
+            </div>
+          </div>
+        </div>
+        <!-- page Info -->
+        <div class="game-wrapper info-page" hidden>
+          <div class="info-page__header">
+            <div class="game-wrapper__title">Bulls & Cows</div>
+            <div class="info-page__subtitle">Правила игры</div>
+          </div>
+          <div class="info-page__body info-body">
+            <ol class="info-body__list">
+              <li class="info-body__item">Компьютер загадывает четырехзначное число.</li>
+              <li class="info-body__item">Цифры в этом числе от 1 до 9.</li>
+              <li class="info-body__item">Цифры в числе не повторяются.</li>
+              <li class="info-body__item">Компьютер подсказывает Вам: первое значение в ответе - количество цифр, отгаданных в числе, второе - количество цифр, стоящих в загаданном числе на своих местах.</li>
+              <li class="info-body__item">Необходимо отгадать с 7 раз.</li>
+            </ol>
+            <div class="info-body__action">
+              <button class="info-body__btn btn-i btn-info-next">Продолжить</button>
+              <button class="info-body__btn btn-i btn-info-exit">Выход</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- start Game -->
+        <div class="game-wrapper game-start">
+          <div class="game-start__header header-start">
+            <div class="header-start__top">
+              <div class="header-start__timer top-title">Время: <span class="timer_elem">00:00</span></div>
+              <div class="header-start__step top-title">Ходы: 10</div>
+              <div class="header-start__refresh top-title"></div>
+              <div class="header-start__logout top-title">UserName</div>
+            </div>
+            <div class="header-start__bottom">
+              <div class="header-start__start">
+                <input type="text" placeholder="Введите число" maxlength="4" value="" class="header-start__start-input" required>
+                <bottom class="header-start__start-btn">Отправить</bottom>
+              </div>
+            </div>
+          </div>
+          <div class="game-start__main game-main">
+            <div class="game-main__list">      
+            </div>
+          </div>
+          <div class="game-start__footer game-footer">
+          </div>
+        </div>
+      </div>
+    </section>  
+  </div>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>

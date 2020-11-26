@@ -1,0 +1,401 @@
+@import "source/setting";
+@import "source/vars";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+.main {
+	background-color: #F8F9FE;
+}
+.game-section {
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.game-login {
+	padding: 40px;
+	&__subtitle {
+		color: $secondary-color;
+		margin-top: 50px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 300;
+    @media screen and ( max-width: 768px ) {
+      font-size: 24px;
+    }
+	}
+	&__block {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__input {
+		font-size: 24px;
+		padding: 10px 15px;
+		width: 60%;
+		border: 1px solid $secondary-color;
+		transition: $transition;
+		background-color: $white-color;
+		margin-bottom: 20px;
+		&:focus{
+			border: 1px solid $secondary-color;
+		}
+	}
+	&__btn {
+		border: 1px solid $secondary-color;
+		color: $secondary-color;
+		margin-top: 10px;
+		transition: $transition;
+		&:hover {
+			background-color: $secondary-color;
+			border: 1px solid $secondary-color;
+			color: $white-color;
+		}
+	}
+	.block-check-form {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 60%;
+		padding: 0 0  8px 0;
+		& .form-check {
+			display: flex;
+			align-items: center;
+		}
+	}
+	.check-form {
+			&__input {
+				width: 16px;
+				height: 16px;	
+				margin-right: 10px;
+			}
+			&__label{
+				display: block;
+				font-size: 14px;
+				color: darken(#ffffff, 30%);
+			}
+			&_link {
+				font-size: 14px;
+				color: darken(#ffffff, 30%);
+				&:hover {
+					color: $secondary-color;
+				}
+				&:active {
+					color: lighten($secondary-color, 20%);
+				}
+			}
+	}
+	
+}
+.btn {
+	width: 60%;
+	padding: 10px 20px;
+	font-size: 18px;
+}
+
+.game-page {
+	background: $primary-color;
+	color: $white-color;
+	padding: 40px;
+	&__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}	
+}
+.game-start {
+	background: $white-color;
+	color: $secondary-color;
+}
+
+.game-wrapper {
+	width: 690px;
+  min-height: 739px;
+  margin-top: 20px;
+  box-shadow: 10px 0px 70px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	transition: $transition;
+	&__title {
+		color: $secondary-color;
+    text-align: center;
+		font-size: 44px;
+		font-weight: 500;
+    @media screen and ( max-width: 768px ) {
+      font-size: 24px;
+		}
+		&-white{
+			display: inline-block;
+			color: $white-color;
+			text-align: center;
+			font-size: 44px;
+			font-weight: 500;
+			@media screen and ( max-width: 768px ) {
+				font-size: 24px;
+			}
+		}
+	}
+	@media screen and ( max-width: 768px ) {
+		margin-top: 20px;
+		padding: 20px;
+		border-radius: 10px;
+	}
+	&__user {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		&-btn {
+			
+		}
+	}
+}
+.before-block {
+	&__wrapper{
+		display: flex;
+		justify-content: center;
+		align-self: center;
+		margin-top: 100px;
+	}
+	&__btn-start {
+		color: $white-color;
+		border: 2px solid $white-color;
+		&:hover {
+			background-color: $white-color;
+			color: $primary-color;
+		}
+		&:active {
+			color: darken($primary-color, 20%);
+		}
+	}
+	&__text {
+		display: block;
+		margin-top: 30px;
+		text-align: justify;
+	}
+	&__btn-info {
+		color: $green-color;
+		border: 2px solid $green-color;
+		&:hover {
+			background-color: $green-color;
+			color: $secondary-color;
+		}
+		&:active {
+			color: darken($secondary-color, 20%);
+		}
+	}
+}
+.btn-c {
+	font-size: 34px;
+	font-weight: 500;
+	letter-spacing: 3px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	transition: $transition;
+	&:active {
+		box-shadow: inset 10px 0px 70px 2px rgba(0, 0, 0, 0.2);
+	}
+}
+.user-info {
+	color: $white-color;
+  text-align: center;
+	font-size: 24px;
+	font-weight: 500;
+	&:hover {
+		color: darken(#Ffffff, 10%);
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+.game-start {
+	&__header {
+		padding: 40px;
+		background-color: $green-color;
+		border-radius: 20px 20px 0 0 ;
+	}
+
+	&__main {
+	}
+
+	&__footer {
+	}
+}
+.header-start {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		& .top-title{
+			font-size: 24px;
+			color: $white-color;
+		}
+	}
+
+	&__timer {
+	}
+
+	&__step {
+	}
+
+	&__refresh {
+	}
+
+	&__logout {
+	}
+
+	&__bottom {
+		margin-top: 15px;
+	}
+
+	&__start {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__start-input {
+		font-size: 24px;
+		padding: 10px 15px;
+		width: 70%;
+		border: 1px solid grey;
+		transition: $transition;
+		background-color: $white-color;
+		margin-right: 10px;
+		&:focus{
+			border: 1px solid $secondary-color;
+		}
+	}
+
+	&__start-btn {
+		width: 30%;
+		text-align: center;
+		padding: 10px 20px;
+		font-size: 18px;
+		border: 2px solid $secondary-color;
+		color: $white-color;
+		background-color: $secondary-color;
+		transition: $transition;
+		&:hover {
+			background-color: $green-color;
+			border: 2px solid $secondary-color;
+			color: $white-color;
+		}
+		&:active {
+			border: 2px solid $secondary-color;
+			color: $white-color;
+			background-color: $secondary-color;
+		}
+	}
+}
+.game-start {
+
+	&__main {
+		
+	}
+}
+.game-main {
+
+	&__list {
+
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 40px;
+		background-color: $grey-color;
+		&:nth-child(2n+1){
+			background-color: $white-color;
+		}
+	}
+	&__num-row {
+		width: 20%;
+	}
+	&__number {
+		width: 20%;
+		text-align: center;
+	}
+
+	&__bulls {
+		width: 40%;
+		text-align: right;
+		margin-right: 10px;
+	}
+
+	&__cows {
+		width: 40%;
+	}
+	& .main-title {
+		display: inline-block;
+		font-size: 24px;
+		font-weight: 500;
+		color: $secondary-color;
+	}
+}
+
+
+.info-page {
+	background: $green-color;
+	color: $white-color;
+	padding: 40px;
+	// .info-page__header
+
+	&__header {
+
+	}
+
+	// .info-page__subtitle
+
+	&__subtitle {
+		color: $white-color;
+  	text-align: center;
+		font-size: 32px;
+		font-weight: 500;
+		margin-top: 20px;
+	}
+	// .info-page__body
+
+	&__body {
+		margin-top: 30px;
+	}
+}
+.info-body {
+	padding:  0 40px;
+	// .info-body__list
+
+	&__list {
+		margin-bottom: 30px;
+	}
+
+	// .info-body__item
+
+	&__item {
+		color: $secondary-color;
+		font-size: 24px;
+
+	}
+	&__action	{
+		display: flex;
+		justify-content: space-between;
+	}
+	// .info-body__btn
+
+	&__btn {
+		border: 1px solid $secondary-color;
+		color: $secondary-color;
+		margin-top: 10px;
+		transition: $transition;
+		&:hover {
+			background-color: $secondary-color;
+			border: 1px solid $secondary-color;
+			color: $white-color;
+		}
+	}
+}
+
+.btn-i {
+	width: 45%;
+	padding: 10px 5px;
+	font-size: 18px;
+}
+
+
